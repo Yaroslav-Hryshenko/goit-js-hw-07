@@ -44,8 +44,9 @@ function onImageClik(evt) {
       instance.close();
     }
   });
-    
-    
+     document.removeEventListener("keydown", (evt) =>
+       onEscPress(evt, instance)
+     );
 }
 
 function blockStandartAction(evt) {
